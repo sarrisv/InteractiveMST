@@ -1,12 +1,11 @@
 package InteractiveMST;
 
 import javax.swing.*;
-import java.applet.Applet;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class LaunchScreen extends Applet implements Runnable, MouseListener {
+public class LaunchScreen extends java.applet.Applet implements Runnable, MouseListener {
 
     Font title = new Font("Helvetica", Font.BOLD, 30);
     Font description = new Font("Helvetica", Font.PLAIN, 15);
@@ -62,7 +61,7 @@ public class LaunchScreen extends Applet implements Runnable, MouseListener {
         if (e.getX() >= 140 && e.getX() <= 230 && e.getY() >= 200 && e.getY() <= 230)
             stop();
         if (e.getX() >= 240 && e.getX() <= 330 && e.getY() >= 200 && e.getY() <= 230)
-            AppletTest.n = Integer.parseInt(JOptionPane.showInputDialog("How many nodes would you like?"));
+            MST.n = Integer.parseInt(JOptionPane.showInputDialog("How many nodes would you like?"));
     }
 
     public void mousePressed(MouseEvent e) {
