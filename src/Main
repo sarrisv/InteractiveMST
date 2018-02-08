@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class Main {
 
-    static JFrame f = new JFrame("Interactive MST application");
+    static JFrame f = new JFrame("Interactive Algorithm application");
 
     public static void main(String[] args) {
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -20,8 +20,8 @@ public class Main {
 
     public static void runMST() {
         f.setVisible(false);
-        AppletTest interactiveMST = new AppletTest();
-
+        MST interactiveMST = new MST();
+        
         f.getContentPane().removeAll();
         f.getContentPane().add(interactiveMST);
         interactiveMST.init();
